@@ -1,0 +1,4 @@
+node_modules
+.build_service
+.serverless
+RETURN_VAL

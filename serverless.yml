@@ -1,0 +1,34 @@
+service:
+  name: gestalt-twilio
+provider:
+  name: gestalt
+  context: /engineering/jay-bee/minio-playground
+  laser: laser
+  api: test
+  objectStore: true
+functions:
+  sms-twilio:
+    description: "This is a lambda that sends a twilio sms message"
+    runtime: nodejs
+    handler: index.js;run
+    package:
+      compressed: true
+    headers:
+      Content-Type: text/html
+    endpoint:
+      path: /smshello
+      methods: ['GET', 'POST']
+      secure: false
+      synchronous: true
+      rate-limit: 60
+    timeout: 60
+    memory: 128
+    cpus: 0.1
+    public: true
+    variables:
+      from: <from-number>
+      to: <to-number>
+      pwd: <twilio password>
+      user: <twilio user>
+plugins:
+  - serverless-gestalt
