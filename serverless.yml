@@ -12,6 +12,8 @@ functions:
     runtime: nodejs
     handler: index.js;run
     package:
+      exclude:
+       - RETURN_VAL
       compressed: true
     headers:
       Content-Type: text/html
