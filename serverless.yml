@@ -32,7 +32,7 @@ functions:
     variables:
       from: <from-number>
       to: <to-number>
-      pwd: <twilio password>
+      password: <twilio password>
       user: <twilio user>
 plugins:
   - serverless-gestalt
