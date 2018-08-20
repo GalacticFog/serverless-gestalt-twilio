@@ -13,7 +13,8 @@ functions:
     handler: index.js;run
     package:
       exclude:
-       - RETURN_VAL
+        - RETURN_VAL
+        - .git/**
       compressed: true
     headers:
       Content-Type: text/html
