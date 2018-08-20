@@ -12,6 +12,7 @@ functions:
     runtime: nodejs
     handler: index.js;run
     package:
+      artifact: sms-twilio.zip
       exclude:
         - RETURN_VAL
         - .git/**
